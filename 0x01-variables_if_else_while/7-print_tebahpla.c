@@ -7,9 +7,12 @@
 
 int main(void)
 {
-char letter;
-for (letter = 'z'; letter >= 'a'; letter--)
-putchar(letter);
+int n = 122;
+while (n > 96)
+{
+putchar(n);
+n -= 1;
+}
 putchar('\n');
-return (0)
+return (0);
 }

@@ -1,4 +1,4 @@
-#include "_putchar.h"
+#include "stdio.h"
 /**
  * program that prints _putchar
  * returns 0

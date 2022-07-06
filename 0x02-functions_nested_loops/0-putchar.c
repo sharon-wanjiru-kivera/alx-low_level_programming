@@ -1,17 +1,17 @@
-#include "main.h"
-
+#include "_putchar.h"
 /**
-* main - Entry point
-* Return: Always 0 (Success)
+ * program that prints _putchar
+ * returns 0
  */
-
 int main(void)
 {
-char *sh = "main";
-while (*sh)
+int n = 0;
+char str_put[9] = "_putchar";
+while (n < 9)
 {
-_putchar(*sh);
-sh++;							
+_putchar(str_put[n];
+n += 1;
+}
 _putchar('\n');
 return (0);
 }

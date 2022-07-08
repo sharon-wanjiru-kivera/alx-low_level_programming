@@ -5,7 +5,8 @@
  */
 int main(void)
 /**
- * main-prints _putchar followed by a new line
+ * main - prints " _putchar" followed by a new line
+ * return: Always 0.
  */
 {
 _putchar('_');

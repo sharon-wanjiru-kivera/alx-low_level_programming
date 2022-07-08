@@ -4,6 +4,9 @@
  * returns 0
  */
 int main(void)
+/**
+ * main-prints _putchar followed by a new line
+ */
 {
 _putchar('_');
 _putchar('p');

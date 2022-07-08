@@ -6,7 +6,8 @@
  */
 int _isupper(int c)                                                                   
 /**
- * int initialization
+ *int initialization
+*/	
 {                                                                                     
 if (c >= 'A' && c <= 'Z')
 {	

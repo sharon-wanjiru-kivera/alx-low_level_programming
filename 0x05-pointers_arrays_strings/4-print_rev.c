@@ -1,14 +1,20 @@
 #include "main.h"
+#include <stdio.h>
 /**
- * print_string - Prints a string in reverse.
- * @s: string to be reserved.
+ * print_rev - check the code for Holberton School students.
+ * @s: pointer int type
+ * Return: Always 0.
  */
 void print_rev(char *s)
 {
-int len = 0, i;
-while (s[i++])
-len++;
-for (i = len - 1; i >= 0; i--)
-_putchar(s[i]);
+int len;
+for (len = 0; *s != '\0'; len++)
+s++;
+s--;
+for (len = len; len != 0; len--)
+{
+_putchar(*s);
+s--;
+}
 _putchar('\n');
 }

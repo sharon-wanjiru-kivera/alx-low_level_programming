@@ -2,25 +2,25 @@
 #include <stdio.h>
 /**
  * rot13 - check the code
- * @a: is a pointer type char
- * @a: is a pointer type char
- * Return: Always 0.
+ * @s: is a pointer type char
+ * Return: the string s
  */
-char *rot13(char *a)
+char *rot13(char *s)
 {
-char leet[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
-char chan[] = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
-int i, j;
-for (i = 0; a[i] != '\0'; i++)
+int a = 0;
+while (s[a])
 {
-for (j = 0; leet[j] != '\0'; j++)
+while ((s[a] >= 'a' && s[a] <= 'z') || (s[a] >= 'A' && s[a] <= 'Z'))
 {
-if (a[i] == leet[j])
+if ((s[a] > 'm' && s[a] <= 'z') || (s[a] > 'M' && s[a] <= 'Z'))
 {
-a[i] = chan[j];
+s[a] -= 13;
+break;
+{
+s[a] += 13;
 break;
 }
+a++;
 }
-}
-return (a);
+return (s);
 }

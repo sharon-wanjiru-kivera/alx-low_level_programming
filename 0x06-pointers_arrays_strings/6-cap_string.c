@@ -5,25 +5,21 @@
  * @a: is a pointer type char
  * Return: Always 0.
  */
-char *cap_string(char *a)
+char *cap_string(char *s)
 {
-char separator[] = " \t\n,;.!?\"(){}";
-int i, j;
-for (i = 0; a[i] != '\0'; i++)
+int a = 0, i;
+int cspc = 13;
+char spc[] = {32, '\t', '\n', 44, ';', 46, '!', '?', '"', '(', ')', '{', '}'};
+while (s[a])
 {
-if (a[i] >= 'a' && a[i] <= 'z')
+i = 0;
+while (i < cspc)
 {
-if (i == 0)
-a[i] -= 32;
-else
-{
-for (j = 0; separator[j] != '\0'; j++)
-{
-if (a[i - 1] == separator[j])
-a[i] -= 32;
+if ((a == 0 || s[a - 1] == spc[i]) && (s[a] >= 97 && s[a] <= 122))
+s[a] -= 32;
+i++;
 }
+a++;
 }
-}
-}
-return (a);
+return (s);
 }

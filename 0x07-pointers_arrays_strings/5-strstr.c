@@ -25,5 +25,5 @@ return (haystack + a);
 }
 a++;
 }
-return (NULL);
+return ('\0');
 }

@@ -3,7 +3,7 @@
 /**
  * _strstr - function 
  * @haystack: the string to search
- *@needle: the string to find
+ * @needle: the string to find
  * Return: char
  */
 char *_strstr(char *haystack, char *needle)
@@ -25,5 +25,5 @@ return (haystack + a);
 }
 a++;
 }
-return ('\0');
+return (NULL);
 }

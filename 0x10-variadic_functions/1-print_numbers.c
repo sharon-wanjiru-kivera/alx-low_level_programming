@@ -8,6 +8,7 @@
  * Return: Nothing
  */
 void print_numbers(const char *separator, const unsigned int n, ...)
+{
 unsigned int i;
 int num;
 va_list int_input;

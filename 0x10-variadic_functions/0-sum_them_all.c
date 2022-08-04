@@ -4,7 +4,7 @@
 /**
  * sum_them_all -checks the code
  * @n: number of arguments
- * Return: Always 0.
+ * Return: The sum of all arguments
  */
 int sum_them_all(const unsigned int n, ...)
 {

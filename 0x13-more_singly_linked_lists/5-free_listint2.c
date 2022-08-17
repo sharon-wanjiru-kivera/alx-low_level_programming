@@ -4,6 +4,7 @@
  * @head: A pointer to the address of the
           head of the listint_t list
  * Sets the head to NULL.
+ * tmp - memory
  */
 void free_listint2(listint_t **head)
 {

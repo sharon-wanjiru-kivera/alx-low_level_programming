@@ -3,6 +3,7 @@
 #include <math.h>
 /**
  * print_binary - Function that prints the binary representation of a number.
+ * @n: number to convert to binary
  * Prototype: void print_binary(unsigned long int n);
  */
 void print_binary(unsigned long int n)

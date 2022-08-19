@@ -3,9 +3,9 @@
 #include <stdio.h>
 #include "lists.h"
 /**
- *  _strlen - function that returns the length of a string.
- *  @s : s is a character
- *  Return: value is i
+ * _strlen - function that returns the length of a string.
+ * @s : s is a character
+ * Return: value is i
  */
 int _strlen(const char *s)
 {
@@ -17,20 +17,29 @@ i++;
 return (i);
 }
 /**
- * add_node - add a new node at beginning of a list_t list.
+ * add_node_end - add a new node at the end of a list_t list.
  * @head: head of a list_t list.
  * @str: value to insert into element.
  * Return: the number of nodes.
  */
-list_t *add_node(list_t **head, const char *str)
+list_t *add_node_end(list_t **head, const char *str)
 {
 list_t *add;
+list_t *pointer;
 add = malloc(sizeof(list_t));
 if (add == NULL)
 return (NULL);
 add->str = strdup(str);
 add->len = _strlen(str);
-add->next = *head;
+add->next = NULL;
+if (*head == NULL)
+{
 *head = add;
+return (add);
+}
+pointer = *head;
+while (pointer->next)
+{
+pointer->next = add;
 return (add);
 }
